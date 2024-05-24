@@ -1,11 +1,11 @@
 import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
 
-export default function Schedule() {
+export default function Faqs() {
 
   return (
     <SafeAreaView>
       <View style={styles.mainView}>
-        <Text style={styles.titleText}>Schedule</Text>
+        <Text style={styles.titleText}>FAQs</Text>
       </View>
     </SafeAreaView>
   );
