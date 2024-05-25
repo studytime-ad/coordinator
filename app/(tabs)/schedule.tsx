@@ -1,12 +1,16 @@
 import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Schedule() {
-
   return (
     <SafeAreaView>
-      <View style={styles.mainView}>
+      <LinearGradient colors={["#FFF3F3", "#DDB52F"]} style={styles.mainView}>
         <Text style={styles.titleText}>Schedule</Text>
-      </View>
+
+        <View style={styles.scheduleView}>
+          <Text style={styles.orientationText}>Day 1</Text>
+        </View>
+      </LinearGradient>
     </SafeAreaView>
   );
 }
@@ -29,6 +33,8 @@ const styles = StyleSheet.create({
     textAlign: "justify",
   },
   scheduleView: {
+    backgroundColor: "#FFF3F3",
+    borderColor: '#DDB52F',
     borderWidth: 2,
     borderRadius: 15,
     height: "92%",

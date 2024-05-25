@@ -1,9 +1,9 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs } from "expo-router";
+import React from "react";
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import { Colors } from "@/constants/Colors";
+import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -11,42 +11,57 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: '#000000',
+        tabBarInactiveTintColor: '#000000',
         headerShown: false,
-      }}>
+      }}
+    >
+      
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "home" : "home-outline"}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="schedule"
         options={{
-          title: 'Schedule',
+          title: "Schedule",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'calendar' : 'calendar-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "calendar" : "calendar-outline"}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="todo"
         options={{
-          title: 'Todo',
+          title: "Todo",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'list' : 'list-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "list" : "list-outline"}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="faqs"
         options={{
-          title: 'FAQs',
+          title: "FAQs",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'help' : 'help-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "help" : "help-outline"}
+              color={color}
+            />
           ),
         }}
       />

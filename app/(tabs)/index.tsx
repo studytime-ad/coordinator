@@ -1,4 +1,5 @@
 import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 
 export default function HomeScreen() {
@@ -47,7 +48,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView>
-      <View style={styles.mainView}>
+      <LinearGradient colors={['#FFF3F3', '#DDB52F']} style={styles.mainView}>
         <Text style={styles.titleText}>Home</Text>
 
         <View style={styles.scheduleView}>
@@ -63,7 +64,7 @@ export default function HomeScreen() {
             )}
           />
         </View>
-      </View>
+      </LinearGradient>
     </SafeAreaView>
   );
 }
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
   scheduleView: {
     borderWidth: 2,
     borderRadius: 15,
+    borderColor: '#DDB52F',
     height: "92%",
     // flex: 1,
     marginTop: 20,
